@@ -49,7 +49,7 @@ import { ref, reactive } from 'vue'
     const sendData = {
     'cancer_image': base64String.value
  }
-    fetch("https://lungcancerpredictionapi.onrender.com/predict", {
+    fetch("139.84.232.233:8000/predict", {
     method: "POST",
     headers: {
         'Content-Type': 'application/json'
