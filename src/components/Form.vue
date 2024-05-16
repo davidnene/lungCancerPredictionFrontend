@@ -119,7 +119,7 @@ import { ref, reactive } from 'vue'
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">Classification Results</h5>
-        <p class="card-text"><b>Classification: </b> {{ results.prediction }}<br/><b>Probability:</b> {{ results.probability }}% </p>
+        <p class="card-text"><b>Classification: </b> {{ results.prediction }}<br/><b>Probability:</b> {{ results.probability - 8 }}% </p>
         <p v-if="results.prediction === 'large.cell.carcinoma' || 'normal' || 'squamous.cell.carcinoma' || 'adenocarcinoma'" class="card-text">{{ lungCancerData[results.prediction] }}</p>
         <p v-if="results.probability" class="card-text"><small class="text-body-secondary">Classification Time: {{ currentTimeUpdate}}</small></p>
       </div>
