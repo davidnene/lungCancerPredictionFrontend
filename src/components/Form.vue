@@ -108,7 +108,7 @@ import { ref, reactive } from 'vue'
     <label for="exampleInputPassword1" class="form-label">Image Upload</label>
     <input type="file" id="image" class="form-control" name="image" accept="image/*" @change="handleImageUpload" required>
   </div >
-  <button type="submit" class="btn btn-warning" :onClick="predStart">Predict</button>
+  <button type="submit" class="btn btn-warning" :onClick="predStart">Classify</button>
 </form>
 </div>
 <div v-if="results.probability" class="card mb-3" style="max-width: 650px;">
@@ -118,10 +118,10 @@ import { ref, reactive } from 'vue'
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Prediction Results</h5>
-        <p class="card-text"><b>Prediction: </b> {{ results.prediction }}<br/><b>Probability:</b> {{ results.probability }}% </p>
+        <h5 class="card-title">Classification Results</h5>
+        <p class="card-text"><b>Classification: </b> {{ results.prediction }}<br/><b>Probability:</b> {{ results.probability }}% </p>
         <p v-if="results.prediction === 'large.cell.carcinoma' || 'normal' || 'squamous.cell.carcinoma' || 'adenocarcinoma'" class="card-text">{{ lungCancerData[results.prediction] }}</p>
-        <p v-if="results.probability" class="card-text"><small class="text-body-secondary">Prediction Time: {{ currentTimeUpdate}}</small></p>
+        <p v-if="results.probability" class="card-text"><small class="text-body-secondary">Classification Time: {{ currentTimeUpdate}}</small></p>
       </div>
     </div>
   </div>

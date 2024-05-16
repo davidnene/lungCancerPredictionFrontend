@@ -3,7 +3,7 @@
 </script>
 <template>
     <div class="text-center">
-        <h3 style="color: blue;">Lung Cancer Prediction Model</h3>
+        <h3 style="color: blue;">Lung Cancer Classification Model</h3>
         <p class="btn btn-warning" style="font-weight: bold;">Abstract</p>
     </div>
     <div>
